@@ -34,3 +34,31 @@ pub fn temperature_converter() {
     println!("Fehr {:.6}", fahrenheit);
     println!("Kel {:.6}", kelvin);
 }
+
+pub fn mini_stat_calculator() {
+    println!("------------------");
+    let arr: [u32; 5] = [4, 5, 6, 2, 1];
+
+    let mut min: u32 = arr[0];
+    for i in arr.iter() {
+        if i < &min {
+            min = *i;
+        }
+    }
+    println!("min is {}", min);
+
+    let mut max: u32 = arr[0];
+    for i in arr.iter() {
+        if i > &max {
+            max = *i;
+        }
+    }
+    println!("max is {}", max);
+
+    let total_sum = arr.iter().sum::<u32>();
+    let total_arr_length = arr.len();
+    let mean = total_sum / total_arr_length as u32;
+
+    println!("Mean {} ", mean);
+    println!("------------------");
+}
