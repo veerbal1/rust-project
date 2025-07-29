@@ -5,4 +5,7 @@ fn main() {
     functions::temperature_converter();
 
     functions::mini_stat_calculator();
+
+    let swap = functions::tuple_swapper((5, 3));
+    println!("{:?}", swap);
 }

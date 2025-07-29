@@ -51,3 +51,7 @@ pub fn mini_stat_calculator() {
     println!("Mean {} ", mean);
     println!("------------------");
 }
+
+pub fn tuple_swapper(input: (u32, u32))->(u32, u32) {
+    return (input.1, input.0);
+}
