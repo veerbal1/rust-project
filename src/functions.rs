@@ -23,3 +23,14 @@ pub fn safe_overflow_demo() {
         }
     }
 }
+
+pub fn temperature_converter() {
+    let celsius = 32.59898;
+    let fahrenheit = celsius * 9.0 / 5.0 + 32.0;
+    let kelvin = celsius + 273.15;
+
+    println!("-------------------------------");
+    println!("Calsius {:.3}", celsius);
+    println!("Fehr {:.6}", fahrenheit);
+    println!("Kel {:.6}", kelvin);
+}
