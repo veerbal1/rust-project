@@ -39,21 +39,10 @@ pub fn mini_stat_calculator() {
     println!("------------------");
     let arr: [u32; 5] = [4, 5, 6, 2, 1];
 
-    let mut min: u32 = arr[0];
-    for i in arr.iter() {
-        if i < &min {
-            min = *i;
-        }
-    }
-    println!("min is {}", min);
+    let min: u32 = arr.iter().copied().min().unwrap();
+    let max: u32 = arr.iter().copied().max().unwrap();
 
-    let mut max: u32 = arr[0];
-    for i in arr.iter() {
-        if i > &max {
-            max = *i;
-        }
-    }
-    println!("max is {}", max);
+    println!("Min is {}, Max is {}", min, max);
 
     let total_sum = arr.iter().sum::<u32>();
     let total_arr_length = arr.len();
