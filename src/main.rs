@@ -8,4 +8,6 @@ fn main() {
 
     let swap = functions::tuple_swapper((5, 3));
     println!("{:?}", swap);
+
+    functions::rgb_to_grayscale();
 }

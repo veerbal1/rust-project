@@ -52,6 +52,14 @@ pub fn mini_stat_calculator() {
     println!("------------------");
 }
 
-pub fn tuple_swapper(input: (u32, u32))->(u32, u32) {
+pub fn tuple_swapper(input: (u32, u32)) -> (u32, u32) {
     return (input.1, input.0);
+}
+
+pub fn rgb_to_grayscale() {
+    let rgb = (255, 0, 0);
+    let (r, g, b) = rgb;
+    let grascale: u8 =
+        (0.21 * f64::from(r) + 0.72 * f64::from(g) + 0.07 * f64::from(b)).round() as u8;
+    println!("{}", grascale);
 }
